@@ -20,9 +20,7 @@ def compute_cumenergy(energy):
     for i in range(1, height):
         left_shift = np.roll(cumenergy[i - 1], 1)
         right_shift = np.roll(cumenergy[i - 1], -1)
-        cumenergy[i] = energy[i] + np.minimum(
-            np.minimum(left_shift, cumenergy[i - 1]), right_shift
-        )
+        cumenergy[i] = energy[i] + np.minimum(left_shift, cumenergy[i - 1], right_shift)
 
     return cumenergy
 
