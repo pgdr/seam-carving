@@ -26,10 +26,9 @@ only bits of Bare Egil, leading to an even more Bare Bare Egil:
 
 ## Requirements
 
-- Python 3.x
-- PIL (Pillow) for image processing
-- NumPy for numerical operations
-- tqdm for progress visualization
+- `PIL` (Pillow) for image processing
+- `numpy` for numerical operations
+- (optional) `tqdm` for progress visualization
 
 ## Usage
 
