@@ -1,16 +1,10 @@
 # Seam Carving Program
 
-
-The Seam Carving program implements an image resizing technique based on
-dynamic programming to remove seams with the least energy from an
-image. This approach allows for content-aware image resizing, ensuring
-minimal distortion of important features.
-
-
-Seam carving works by identifying and removing "seams," which are paths
-of least energy through an image. The energy of a pixel is computed
-based on the gradient of pixel intensities, allowing the algorithm to
-target areas that have less visual importance for removal.
+The Seam Carving program applies a dynamic programming approach to
+resize images by removing low-energy "seams", enabling content-aware
+resizing with minimal distortion.  It identifies *seams*—paths of least
+energy vertically through the image—by computing pixel energy from
+intensity gradients.
 
 
 ## Example
