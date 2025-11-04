@@ -1,7 +1,12 @@
 import sys
 from PIL import Image, ImageFilter
 import numpy as np
-from tqdm import tqdm
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    print("Skipping module tqdm", file=sys.stderr)
+    tqdm = list
 
 
 def compute_energy(img):
