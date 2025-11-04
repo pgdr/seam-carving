@@ -1,3 +1,4 @@
+import os
 import sys
 from PIL import Image, ImageFilter
 import numpy as np
@@ -72,11 +73,11 @@ def seam_carving(img, new_width):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        exit("Usage: seam.py fname.py width")
+        exit("Usage: seam.py image_file width")
     fname = sys.argv[1]
     width = int(sys.argv[2])
     input_img = Image.open(fname)
     resized_img = seam_carving(input_img, new_width=width)
     resized_img = resized_img.convert("RGB")
-    fname_ = fname.split(".")[0]
-    resized_img.save(fname_ + f"-{width}.jpg")
+    fname_, ext = os.path.splitext(fname)
+    resized_img.save(fname_ + f"-{width}{ext}")
